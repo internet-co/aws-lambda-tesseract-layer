@@ -3,9 +3,11 @@ service: tesseract-ocr-layer
 provider:
   name: aws
   region: us-west-2
+  profile: ${opt:profile}
 
 layers:
   tesseract:
     path: layer
+    retain: false
     compatibleRuntimes:
       - java11
