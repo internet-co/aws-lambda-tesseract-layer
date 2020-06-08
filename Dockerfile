@@ -16,7 +16,7 @@ WORKDIR /root
 
 RUN git clone https://github.com/tesseract-ocr/tesseract.git
 WORKDIR tesseract
-RUN git checkout 4.1.0
+RUN git checkout 4.1.1
 RUN export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig && ./autogen.sh && ./configure && make
 RUN make install
 
